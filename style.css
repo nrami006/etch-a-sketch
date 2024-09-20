@@ -1,0 +1,41 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 720px;
+    height: 720px;
+}
+
+.grid-cell {
+    /* background-color: black; */
+    border: 1px solid black;
+}
+
+.grid-cell:hover {
+    background-color: black;
+
+}
+
+.grid-cell:not(:hover) {
+    /* Makes the cell transition take 1 second so that it fades out in 1s and creates a fading trail effect. */
+    transition: all 1s ease-out;
+}
