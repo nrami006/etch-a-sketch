@@ -10,8 +10,10 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 #grid-container {
@@ -30,12 +32,11 @@ body {
     border: 1px solid black;
 }
 
-.grid-cell:hover {
+/* .grid-cell:hover {
     background-color: black;
 
 }
 
 .grid-cell:not(:hover) {
-    /* Makes the cell transition take 1 second so that it fades out in 1s and creates a fading trail effect. */
     transition: all 1s ease-out;
-}
+} */
