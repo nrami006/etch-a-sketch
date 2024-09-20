@@ -25,11 +25,14 @@ body {
     align-items: flex-start;
     width: 720px;
     height: 720px;
+    /* border: 1px solid black; */
+
 }
 
 .grid-cell {
     /* background-color: black; */
     border: 1px solid black;
+    opacity: 0.1;
 }
 
 /* .grid-cell:hover {

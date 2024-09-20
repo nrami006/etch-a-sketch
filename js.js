@@ -2,6 +2,10 @@ let grid_columns = 16;
 let grid_rows = 16;
 const gridContainer = document.querySelector("#grid-container");
 
+
+function randomNumber(max) {
+    return Math.floor(Math.random() * max);
+}
 function removeCurrentGrid() {
     // Remove all children (grid cells) from gridContainer
     while (gridContainer.firstChild) {
@@ -18,9 +22,12 @@ function createNewGrid() {
     for (let i = 0; i < grid_columns; ++i) {
         for (let j = 0; j < grid_rows; ++j) {
             let newCell = gridCell.cloneNode(true);
-            newCell.addEventListener("mousemove", (e) => {
+            newCell.addEventListener("mouseover", (e) => {
                 if (!e.shiftKey) {
-                    e.target.style.backgroundColor = "black";
+                    e.target.style.backgroundColor = `rgb(${randomNumber(255)},${randomNumber(255)},${randomNumber(255)})`;
+                    if (e.target.style.opacity < 1) {
+                        e.target.style.opacity = `${Number(e.target.style.opacity) + 0.1}`;
+                    }
                 }
             })
             gridContainer.appendChild(newCell);
